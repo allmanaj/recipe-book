@@ -4,7 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class recipe extends Model
+class Recipe extends Model
 {
-    //
+    
+    public function ingredients(){
+    	return $this->belongsToMany('App\Ingredient', 'recipes_ingredients');
+    }
 }

@@ -7,6 +7,5 @@ $factory->define(Recipe::class, function (Faker $faker) {
     return [
         'title' => $faker->colorName,
         'method' => $faker->paragraph,
-        'ingredients' => $faker->paragraph
     ];
 });

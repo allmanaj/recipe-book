@@ -27,7 +27,7 @@ class RecipeList extends React.Component{
 
 	render(){
 		return (
-			<div className="container">
+			<div className="container mb-5">
 				<div className="row">
 					<Search search={this.search}/>
 				</div>

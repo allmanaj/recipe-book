@@ -53,6 +53,7 @@ class RecipeCreationModal extends React.Component{
 				method: '',
 				ingredients: ''
 			});
+			$('#createRecipeModal').modal('hide');
 		})
 		.catch((err) => {
 			console.error(err);
