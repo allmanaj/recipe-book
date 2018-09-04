@@ -6,7 +6,7 @@ class SingleRecipe extends React.Component{
 	constructor(props){
 		super(props);
 		this.state = {
-			recipe: {}
+			recipe: {ingredients:[{name: ''}]}
 		}
 	}
 
@@ -23,17 +23,23 @@ class SingleRecipe extends React.Component{
 
 	render(){
 		return (
-			<div className="container">
+			<div className="container"> 
 				<div className="row mt-3">
 					<div className="col-md-4">
 						<h1>{this.state.recipe.title}</h1>
+						<h2></h2>
+
 					</div>
 				</div>
+				<h5>Ingredients</h5>
 				<div className="row mt-3">
-					<h5>Ingredients</h5>
 					<div className="col-md-4">
 						<ul className="list-group">
-							{ console.log(this.state.recipe) }
+							{
+								this.state.recipe.ingredients.map((ingredient, index) => {
+									return (<li key="index" className="list-group-item">{ingredient.name}</li>)
+								})
+							}
 						</ul>
 					</div>
 				</div>

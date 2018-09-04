@@ -60314,7 +60314,7 @@ var SingleRecipe = function (_React$Component) {
 		var _this = _possibleConstructorReturn(this, (SingleRecipe.__proto__ || Object.getPrototypeOf(SingleRecipe)).call(this, props));
 
 		_this.state = {
-			recipe: {}
+			recipe: { ingredients: [{ name: '' }] }
 		};
 		return _this;
 	}
@@ -60347,24 +60347,31 @@ var SingleRecipe = function (_React$Component) {
 							'h1',
 							null,
 							this.state.recipe.title
-						)
+						),
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('h2', null)
 					)
+				),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					'h5',
+					null,
+					'Ingredients'
 				),
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 					'div',
 					{ className: 'row mt-3' },
-					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-						'h5',
-						null,
-						'Ingredients'
-					),
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 						'div',
 						{ className: 'col-md-4' },
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 							'ul',
 							{ className: 'list-group' },
-							console.log(this.state.recipe)
+							this.state.recipe.ingredients.map(function (ingredient, index) {
+								return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+									'li',
+									{ key: 'index', className: 'list-group-item' },
+									ingredient.name
+								);
+							})
 						)
 					)
 				)
