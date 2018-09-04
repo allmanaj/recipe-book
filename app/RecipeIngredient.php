@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class UserIngredient extends Model
+class RecipeIngredient extends Model
 {
     //
 }

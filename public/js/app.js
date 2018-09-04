@@ -60325,8 +60325,8 @@ var SingleRecipe = function (_React$Component) {
 			var _this2 = this;
 
 			__WEBPACK_IMPORTED_MODULE_1_axios___default.a.get('/api/recipes/' + this.props.match.params.id).then(function (res) {
-				console.log(res);
 				_this2.setState({ recipe: res.data });
+				console.log(res.data);
 			}).catch(function (err) {
 				console.log(err);
 			});
@@ -60347,6 +60347,24 @@ var SingleRecipe = function (_React$Component) {
 							'h1',
 							null,
 							this.state.recipe.title
+						)
+					)
+				),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					'div',
+					{ className: 'row mt-3' },
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						'h5',
+						null,
+						'Ingredients'
+					),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						'div',
+						{ className: 'col-md-4' },
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							'ul',
+							{ className: 'list-group' },
+							console.log(this.state.recipe)
 						)
 					)
 				)

@@ -13,7 +13,7 @@ class CreateRecipeIngredientsTable extends Migration
      */
     public function up()
     {
-        Schema::create('recipes_ingredients', function (Blueprint $table) {
+        Schema::create('recipe_ingredients', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('recipe_id');
             $table->foreign('recipe_id')->references('id')->on('recipes');
@@ -30,6 +30,6 @@ class CreateRecipeIngredientsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users_ingredients');
+        Schema::dropIfExists('recipe_ingredients');
     }
 }

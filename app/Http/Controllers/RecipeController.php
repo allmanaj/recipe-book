@@ -13,7 +13,8 @@ class RecipeController extends Controller
 	}
 
 	public function view(Recipe $recipe){
-		return $recipe;
+		$r = $recipe->load('ingredients');
+		return $r;
 	}
 
 	public function store(Request $request){
