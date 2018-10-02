@@ -17,7 +17,6 @@ class RecipeList extends React.Component{
 	componentDidMount(){
 		axios.get('/api/recipes')
 		.then(recipes => {
-			this.recipes = recipes.data;
 			this.setState({recipes: recipes.data})
 		})
 		.catch(err => {
