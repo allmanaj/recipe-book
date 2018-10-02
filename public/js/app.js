@@ -60010,7 +60010,6 @@ var RecipeList = function (_React$Component) {
 			var _this2 = this;
 
 			__WEBPACK_IMPORTED_MODULE_1_axios___default.a.get('/api/recipes').then(function (recipes) {
-				_this2.recipes = recipes.data;
 				_this2.setState({ recipes: recipes.data });
 			}).catch(function (err) {
 				console.error(err);

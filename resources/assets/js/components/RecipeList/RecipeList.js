@@ -17,7 +17,6 @@ class RecipeList extends React.Component{
 	componentDidMount(){
 		axios.get('/api/recipes')
 		.then(recipes => {
-			this.recipes = recipes.data;
 			this.setState({recipes: recipes.data})
 		})
 		.catch(err => {
@@ -35,11 +34,7 @@ class RecipeList extends React.Component{
 					<div className="col-md-12">
 						<ul className="list-group">
 						{
-							this.state.recipes.map((recipe, index) => {
-								return (
-									<RecipeListItem key={index} recipe={recipe}/>
-								)
-							})
+							this.state.recipes.map((recipe, index) => <RecipeListItem key={index} recipe={recipe}/>)
 						}
 						</ul>
 					</div>
